@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- 
+    Contributors: Jing Liu, Tatum Alenko, Ignacio Sada Solomon
+    Built for the NASA Space Apps Challenge 2018, Montreal
+-->
+
+<head>
+    <title>Launch Party - Rocket Launch Map</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+    <script type="text/javascript" src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js" integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="map.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark" style="background-color: #1a1a1a">
+    <!-- <div class="container-fluid"> -->
+    <div class="d-flex flex-column">
+    <div class="d-sm-flex flex-row">
+        <a class="navbar-brand" href="index.html" style=""><b>Launch Party</b></a>
+        <div class="row justify-content-end" id="thenavbar">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="res/rocket.png"></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <small>Map the next rocket launches around the world!</small>
+    </div>
+    </nav>
+    <div class="my-4"> </div>
+
+    <div class="container-fluid padding" id="content">
+        <div class="row">
+            <!-- Map -->
+            <div class="col-md-8 col-sm-12" id="mapContainer">
+                <div id="mapid">
+                    <script>initmap();</script>
+                </div>
+            </div>
+
+            <!-- Data -->
+            <div class="col-md-4 col-sm-12" id="rocketinfo">
+                <!-- Default text -->
+                <p id="testg">The next launch at __________ is: </p>
+                <p id="testh">Your rocket launch data will appear here.</p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="launchlib.js"></script>
+    <div class="container-fluid">
+    </div>
+
+</body>
+
+
+
+</html>
